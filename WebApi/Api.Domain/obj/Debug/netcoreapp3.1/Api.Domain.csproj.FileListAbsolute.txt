@@ -1,0 +1,16 @@
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\bin\Debug\netcoreapp3.1\Api.Domain.deps.json
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\bin\Debug\netcoreapp3.1\Api.Domain.dll
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\bin\Debug\netcoreapp3.1\Api.Domain.pdb
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\obj\Debug\netcoreapp3.1\Api.Domain.csprojAssemblyReference.cache
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\obj\Debug\netcoreapp3.1\Api.Domain.AssemblyInfoInputs.cache
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\obj\Debug\netcoreapp3.1\Api.Domain.AssemblyInfo.cs
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\obj\Debug\netcoreapp3.1\Api.Domain.dll
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\obj\Debug\netcoreapp3.1\Api.Domain.pdb
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\bin\Debug\netcoreapp3.1\Api.Common.dll
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\bin\Debug\netcoreapp3.1\Api.Database.dll
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\bin\Debug\netcoreapp3.1\Api.Repository.dll
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\bin\Debug\netcoreapp3.1\Api.Common.pdb
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\bin\Debug\netcoreapp3.1\Api.Database.pdb
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\bin\Debug\netcoreapp3.1\Api.Repository.pdb
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\obj\Debug\netcoreapp3.1\Api.Domain.csproj.CoreCompileInputs.cache
+E:\ProjectsBase\WebApiBase\WebApi\Api.Domain\obj\Debug\netcoreapp3.1\Api.Domain.csproj.CopyComplete

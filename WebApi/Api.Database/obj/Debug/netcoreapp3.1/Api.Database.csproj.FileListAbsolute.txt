@@ -1,0 +1,11 @@
+E:\ProjectsBase\WebApiBase\WebApi\Api.Database\bin\Debug\netcoreapp3.1\Api.Database.deps.json
+E:\ProjectsBase\WebApiBase\WebApi\Api.Database\bin\Debug\netcoreapp3.1\Api.Database.dll
+E:\ProjectsBase\WebApiBase\WebApi\Api.Database\obj\Debug\netcoreapp3.1\Api.Database.AssemblyInfoInputs.cache
+E:\ProjectsBase\WebApiBase\WebApi\Api.Database\obj\Debug\netcoreapp3.1\Api.Database.AssemblyInfo.cs
+E:\ProjectsBase\WebApiBase\WebApi\Api.Database\bin\Debug\netcoreapp3.1\Api.Database.runtimeconfig.json
+E:\ProjectsBase\WebApiBase\WebApi\Api.Database\bin\Debug\netcoreapp3.1\Api.Database.runtimeconfig.dev.json
+E:\ProjectsBase\WebApiBase\WebApi\Api.Database\bin\Debug\netcoreapp3.1\Api.Database.pdb
+E:\ProjectsBase\WebApiBase\WebApi\Api.Database\obj\Debug\netcoreapp3.1\Api.Database.csproj.CoreCompileInputs.cache
+E:\ProjectsBase\WebApiBase\WebApi\Api.Database\obj\Debug\netcoreapp3.1\Api.Database.dll
+E:\ProjectsBase\WebApiBase\WebApi\Api.Database\obj\Debug\netcoreapp3.1\Api.Database.pdb
+E:\ProjectsBase\WebApiBase\WebApi\Api.Database\obj\Debug\netcoreapp3.1\Api.Database.genruntimeconfig.cache

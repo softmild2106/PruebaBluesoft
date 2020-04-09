@@ -1,0 +1,9 @@
+E:\ProjectsBase\WebApiBase\WebApi\Api.Common\bin\Debug\netcoreapp3.1\Api.Common.deps.json
+E:\ProjectsBase\WebApiBase\WebApi\Api.Common\bin\Debug\netcoreapp3.1\Api.Common.dll
+E:\ProjectsBase\WebApiBase\WebApi\Api.Common\bin\Debug\netcoreapp3.1\Api.Common.pdb
+E:\ProjectsBase\WebApiBase\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.csprojAssemblyReference.cache
+E:\ProjectsBase\WebApiBase\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.csproj.CoreCompileInputs.cache
+E:\ProjectsBase\WebApiBase\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.AssemblyInfoInputs.cache
+E:\ProjectsBase\WebApiBase\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.AssemblyInfo.cs
+E:\ProjectsBase\WebApiBase\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.dll
+E:\ProjectsBase\WebApiBase\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.pdb
