@@ -14,5 +14,6 @@ namespace Api.Database.Entity
         [Required]
         [StringLength(500)]
         public string Description { get; set; }
+        public ICollection<Book> Books { get; set; }
     }
 }

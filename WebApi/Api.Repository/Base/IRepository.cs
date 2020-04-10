@@ -6,7 +6,10 @@ using System.Text;
 
 namespace Api.Repository.Base
 {
-public interface IRepository<TEntity, TKey> where TEntity : EntityBase<TKey>
+    public interface IRepository
+    {
+    }
+    public interface IRepository<TEntity, TKey> where TEntity : EntityBase<TKey>
     {
         TEntity GetById(TKey id);
         IEnumerable<TEntity> List();

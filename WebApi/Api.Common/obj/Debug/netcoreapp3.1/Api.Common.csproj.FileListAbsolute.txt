@@ -10,8 +10,12 @@ E:\ProjectsBase\WebApiBase\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\bin\Debug\netcoreapp3.1\Api.Common.deps.json
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\bin\Debug\netcoreapp3.1\Api.Common.dll
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\bin\Debug\netcoreapp3.1\Api.Common.pdb
-E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.csproj.CoreCompileInputs.cache
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.AssemblyInfoInputs.cache
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.AssemblyInfo.cs
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.dll
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.pdb
+E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.csprojAssemblyReference.cache
+E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\bin\Debug\netcoreapp3.1\Api.Common.runtimeconfig.json
+E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\bin\Debug\netcoreapp3.1\Api.Common.runtimeconfig.dev.json
+E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.csproj.CoreCompileInputs.cache
+E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.genruntimeconfig.cache

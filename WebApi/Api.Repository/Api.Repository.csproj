@@ -5,11 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="IRepository\" />
-    <Folder Include="Repository\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Api.Common\Api.Common.csproj" />
     <ProjectReference Include="..\Api.Database\Api.Database.csproj" />
   </ItemGroup>

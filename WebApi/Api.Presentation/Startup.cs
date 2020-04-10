@@ -4,6 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Api.Database.Data;
 using Api.Domain;
+using Api.Domain.IService;
+using Api.Domain.Service;
+using Api.Repository.IRepository;
+using Api.Repository.Repository;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -30,6 +34,19 @@ namespace Api.Presentation
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddScoped(typeof(IAuthorRepository), typeof(AuthorRepository));
+            services.AddScoped(typeof(IAuthorService), typeof(AuthorService));
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+                {
+                    Version = "v1",
+                    Title = "Api",
+                    Description = "Api  Web API",
+                });
+
+                c.CustomSchemaIds(x => x.FullName);
+            });
             services.AddDbContext<ApiContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddSingleton(provider => new MapperConfiguration(cfg =>
             {
@@ -60,6 +77,11 @@ namespace Api.Presentation
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api API V1");
             });
         }
     }

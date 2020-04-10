@@ -11,7 +11,7 @@ namespace Api.Repository.Base
 {
     public class Repository<TEntity, TKey> : IRepository<TEntity, TKey> where TEntity : EntityBase<TKey>
     {
-        private readonly ApiContext _dbContext;
+        protected readonly ApiContext _dbContext;
 
         public Repository(ApiContext dbContext)
         {
@@ -32,12 +32,13 @@ namespace Api.Repository.Base
             _dbContext.SaveChanges();
         }
 
-        public TEntity Update(TEntity entity)
+        public TEntity Update(TEntity editedEntity)
         {
-            entity.LastModifiedOn = DateTime.Now;
-            _dbContext.Entry(entity).State = EntityState.Modified;
+            editedEntity.LastModifiedOn = DateTime.Now;
+            editedEntity.LastModifiedBy = 1;
+            _dbContext.Entry(editedEntity).State = EntityState.Modified;
             _dbContext.SaveChanges();
-            return entity;
+            return editedEntity;
         }
 
         public TEntity GetById(TKey id)

@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿using Api.Database.Entity;
+using Api.Domain.Dto;
+using AutoMapper;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +11,7 @@ namespace Api.Domain
     {
         public AutoMapperConfiguration()
         {
+            CreateMap<Author, AuthorDto>().ReverseMap();
             /*var assembly = Assembly.LoadFrom("Api.Core.DTO");
                            var entityAssembly = typeof(Dto).Assembly;
                            var modelAssembly = typeof(BaseModel).Assembly;

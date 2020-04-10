@@ -16,5 +16,7 @@ namespace Api.Database.Entity
         public string FullName { get { return $"{Name} {LastName}"; } }
         [Required]
         public DateTime DateBirth { get; set; }
+
+        public ICollection<Book> Books { get; set; }
     }
 }
