@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using Api.Domain.Base;
 using Api.Domain.Dto;
 using Api.Domain.IService;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
@@ -14,72 +16,72 @@ namespace Api.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class AuthorController : ControllerBase
+    public class BookController : ControllerBase
     {
-        private IAuthorService service;
-        private readonly ILogger<AuthorController> _logger;
-        public AuthorController(IAuthorService service, ILogger<AuthorController> logger)
+        private IBookService service;
+        private readonly ILogger<BookController> _logger;
+        public BookController(IBookService service, ILogger<BookController> logger)
         {
             _logger = logger;
             this.service = service;
         }
         // GET: api/Author
         [HttpGet]
-        public DataTransferObject<IEnumerable<AuthorDto>> Get()
+        public DataTransferObject<IEnumerable<BookDto>> Get()
         {
             try
             {
                 return service.FindAll();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 var logerror = string.Format(LOG_ERROR, ex.ToString());
                 _logger.LogError(logerror);
-                var resultException =  new DataTransferObject<IEnumerable<AuthorDto>>(null, HttpStatusCode.BadRequest, ex.ToString());
+                var resultException = new DataTransferObject<IEnumerable<BookDto>>(null, HttpStatusCode.BadRequest, ex.ToString());
                 return resultException;
             }
-            
+
         }
         // POST: api/Author
         [HttpPost]
-        public DataTransferObject<AuthorDto> Post([FromBody] AuthorDto author)
+        public DataTransferObject<BookDto> Post([FromBody] BookDto book)
         {
-            
+
             try
             {
-                return service.Create(author);
+                return service.Create(book);
             }
             catch (Exception ex)
             {
-                var logerror = string.Format(LOG_ERROR_WITH_REQUEST_DATA, JsonConvert.SerializeObject(author), ex.ToString());
+                var logerror = string.Format(LOG_ERROR_WITH_REQUEST_DATA, JsonConvert.SerializeObject(book), ex.ToString());
                 _logger.LogError(logerror);
-                var resultException = new DataTransferObject<AuthorDto>(author, HttpStatusCode.BadRequest, ex.ToString());
+                var resultException = new DataTransferObject<BookDto>(book, HttpStatusCode.BadRequest, ex.ToString());
                 return resultException;
             }
         }
 
         // PUT: api/Author/5
         [HttpPost("{id}")]
-        public DataTransferObject<AuthorDto> Update(int id, [FromBody] AuthorDto author)
+        public DataTransferObject<BookDto> Update(int id, [FromBody] BookDto book)
         {
             try
             {
-                return service.Update(author);
+                return service.Update(book);
             }
             catch (Exception ex)
             {
-                var logerror = string.Format(LOG_ERROR_WITH_REQUEST_DATA, JsonConvert.SerializeObject(author), ex.ToString());
+                var logerror = string.Format(LOG_ERROR_WITH_REQUEST_DATA, JsonConvert.SerializeObject(book), ex.ToString());
                 _logger.LogError(logerror);
-                var resultException = new DataTransferObject<AuthorDto>(author, HttpStatusCode.BadRequest, ex.ToString());
+                var resultException = new DataTransferObject<BookDto>(book, HttpStatusCode.BadRequest, ex.ToString());
                 return resultException;
             }
-            
+
         }
 
         // DELETE: api/ApiWithActions/5
         [HttpDelete("{id}")]
-        public DataTransferObject<AuthorDto> Delete(int id)
-        {            
+        public DataTransferObject<BookDto> Delete(int id)
+        {
             try
             {
                 return service.Delete(id);
@@ -88,7 +90,7 @@ namespace Api.Presentation.Controllers
             {
                 var logerror = string.Format(LOG_ERROR_WITH_REQUEST_DATA, id, ex.ToString());
                 _logger.LogError(logerror);
-                var resultException = new DataTransferObject<AuthorDto>(null, HttpStatusCode.BadRequest, ex.ToString());
+                var resultException = new DataTransferObject<BookDto>(null, HttpStatusCode.BadRequest, ex.ToString());
                 return resultException;
             }
         }

@@ -34,8 +34,7 @@ namespace Api.Presentation
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped(typeof(IAuthorRepository), typeof(AuthorRepository));
-            services.AddScoped(typeof(IAuthorService), typeof(AuthorService));
+            AddDependencyInjection(services);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
@@ -52,7 +51,7 @@ namespace Api.Presentation
             {
                 cfg.AddProfile(new AutoMapperConfiguration());
             }).CreateMapper());
-        }
+        }        
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -84,5 +83,20 @@ namespace Api.Presentation
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "Api API V1");
             });
         }
+
+
+
+        private void AddDependencyInjection(IServiceCollection services)
+        {
+            services.AddScoped(typeof(IAuthorRepository), typeof(AuthorRepository));
+            services.AddScoped(typeof(IAuthorService), typeof(AuthorService));
+            services.AddScoped(typeof(ICategoryRepository), typeof(CategoryRepository));
+            services.AddScoped(typeof(ICategoryService), typeof(CategoryService));
+            services.AddScoped(typeof(IBookRepository), typeof(BookRepository));
+            services.AddScoped(typeof(IBookService), typeof(BookService));
+        }
+
+
+
     }
 }

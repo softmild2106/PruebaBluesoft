@@ -19,5 +19,4 @@ E:\projectsTest\PruebaBluesoft\WebApi\Api.Database\obj\Debug\netcoreapp3.1\Api.D
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Database\obj\Debug\netcoreapp3.1\Api.Database.dll
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Database\obj\Debug\netcoreapp3.1\Api.Database.pdb
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Database\obj\Debug\netcoreapp3.1\Api.Database.genruntimeconfig.cache
-E:\projectsTest\PruebaBluesoft\WebApi\Api.Database\obj\Debug\netcoreapp3.1\Api.Database.csprojAssemblyReference.cache
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Database\obj\Debug\netcoreapp3.1\Api.Database.csproj.CoreCompileInputs.cache

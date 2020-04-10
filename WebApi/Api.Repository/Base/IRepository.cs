@@ -15,7 +15,7 @@ namespace Api.Repository.Base
         IEnumerable<TEntity> List();
         IEnumerable<TEntity> List(Expression<Func<TEntity, bool>> predicate);
         TEntity Add(TEntity entity);
-        void Delete(TEntity entity);
+        TEntity Delete(TEntity entity);
         TEntity Update(TEntity entity);
     }
 }

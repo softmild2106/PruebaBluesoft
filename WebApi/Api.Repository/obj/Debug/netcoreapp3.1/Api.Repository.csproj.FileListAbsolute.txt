@@ -20,9 +20,9 @@ E:\projectsTest\PruebaBluesoft\WebApi\Api.Repository\bin\Debug\netcoreapp3.1\Api
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Repository\bin\Debug\netcoreapp3.1\Api.Common.pdb
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Repository\bin\Debug\netcoreapp3.1\Api.Database.pdb
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Repository\obj\Debug\netcoreapp3.1\Api.Repository.csprojAssemblyReference.cache
-E:\projectsTest\PruebaBluesoft\WebApi\Api.Repository\obj\Debug\netcoreapp3.1\Api.Repository.csproj.CoreCompileInputs.cache
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Repository\obj\Debug\netcoreapp3.1\Api.Repository.AssemblyInfoInputs.cache
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Repository\obj\Debug\netcoreapp3.1\Api.Repository.AssemblyInfo.cs
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Repository\obj\Debug\netcoreapp3.1\Api.Repository.csproj.CopyComplete
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Repository\obj\Debug\netcoreapp3.1\Api.Repository.dll
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Repository\obj\Debug\netcoreapp3.1\Api.Repository.pdb
+E:\projectsTest\PruebaBluesoft\WebApi\Api.Repository\obj\Debug\netcoreapp3.1\Api.Repository.csproj.CoreCompileInputs.cache

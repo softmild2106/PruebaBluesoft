@@ -16,7 +16,7 @@ namespace Api.Domain.Base
         DataTransferObject<IEnumerable<TDto>> FindAll();
         DataTransferObject<TDto> Create(TDto dtoObject);
         DataTransferObject<TDto> Update(TDto dtoObject);
-        void Delete(TKey id);
+        DataTransferObject<TDto> Delete(TKey id);
 
     }
 }

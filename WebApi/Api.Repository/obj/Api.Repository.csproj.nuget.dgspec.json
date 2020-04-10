@@ -191,6 +191,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.9.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -32,10 +32,11 @@ namespace Api.Domain.Base
             return response;
         }
 
-        public void Delete(TKey id)
+        public DataTransferObject<TDTO> Delete(TKey id)
         {
             TEntity entity = Repository.GetById(id);
-            Repository.Delete(entity);
+            var response = Repository.Delete(entity);
+            return new DataTransferObject<TDTO>(ConvertToDto(response));
         }
 
         public DataTransferObject<IEnumerable<TDTO>> Find(System.Linq.Expressions.Expression<Func<TEntity, bool>> predicate)

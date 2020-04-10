@@ -26,10 +26,11 @@ namespace Api.Repository.Base
             return entity;
         }
 
-        public void Delete(TEntity entity)
+        public TEntity Delete(TEntity entity)
         {
             _dbContext.Set<TEntity>().Remove(entity);
             _dbContext.SaveChanges();
+            return entity;
         }
 
         public TEntity Update(TEntity editedEntity)

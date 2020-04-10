@@ -12,11 +12,11 @@ namespace Api.Database.Entity
         [Required, StringLength(100)]
         public string BookName { get; set; }
         [Required]
-        [ForeignKey("Standard")]
+        [ForeignKey("Author")]
         public int AuthorId { get; set; }
         public Author Author { get; set; }
         [Required]
-        [ForeignKey("Standard")]
+        [ForeignKey("Category")]
         public int CategoryId { get; set; }
         public Category Category { get; set; }
         [Required, StringLength(13)]

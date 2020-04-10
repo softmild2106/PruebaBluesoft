@@ -198,6 +198,14 @@
             "AutoMapper": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.9.1, )"
             }
           },
           "imports": [
@@ -249,6 +257,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Common\\Api.Common.csproj": {
+                "projectPath": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Common\\Api.Common.csproj"
+              },
               "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Database\\Api.Database.csproj": {
                 "projectPath": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Database\\Api.Database.csproj"
               },
@@ -284,6 +295,14 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.9.1, )"
             }
           },
           "imports": [
@@ -352,6 +371,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "NLog": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            },
+            "NLog.Web.AspNetCore": {
+              "target": "Package",
+              "version": "[4.9.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
