@@ -5108,11 +5108,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Presentation\\Api.Presentation.csproj",
+      "projectUniqueName": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Presentation\\Api.Presentation.csproj",
       "projectName": "Api.Presentation",
-      "projectPath": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Presentation\\Api.Presentation.csproj",
+      "projectPath": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Presentation\\Api.Presentation.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Presentation\\obj\\",
+      "outputPath": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Presentation\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -5132,11 +5132,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Database\\Api.Database.csproj": {
-              "projectPath": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Database\\Api.Database.csproj"
+            "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Database\\Api.Database.csproj": {
+              "projectPath": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Database\\Api.Database.csproj"
             },
-            "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Domain\\Api.Domain.csproj": {
-              "projectPath": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Domain\\Api.Domain.csproj"
+            "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Domain\\Api.Domain.csproj": {
+              "projectPath": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Domain\\Api.Domain.csproj"
             }
           }
         }

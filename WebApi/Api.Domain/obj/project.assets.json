@@ -5017,11 +5017,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Domain\\Api.Domain.csproj",
+      "projectUniqueName": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Domain\\Api.Domain.csproj",
       "projectName": "Api.Domain",
-      "projectPath": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Domain\\Api.Domain.csproj",
+      "projectPath": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Domain\\Api.Domain.csproj",
       "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-      "outputPath": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Domain\\obj\\",
+      "outputPath": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -5041,14 +5041,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Common\\Api.Common.csproj": {
-              "projectPath": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Common\\Api.Common.csproj"
+            "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Common\\Api.Common.csproj": {
+              "projectPath": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Common\\Api.Common.csproj"
             },
-            "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Database\\Api.Database.csproj": {
-              "projectPath": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Database\\Api.Database.csproj"
+            "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Database\\Api.Database.csproj": {
+              "projectPath": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Database\\Api.Database.csproj"
             },
-            "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Repository\\Api.Repository.csproj": {
-              "projectPath": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Repository\\Api.Repository.csproj"
+            "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Repository\\Api.Repository.csproj": {
+              "projectPath": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Repository\\Api.Repository.csproj"
             }
           }
         }

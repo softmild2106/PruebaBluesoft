@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Database\\Api.Database.csproj": {}
+    "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Database\\Api.Database.csproj": {}
   },
   "projects": {
-    "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Database\\Api.Database.csproj": {
+    "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Database\\Api.Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Database\\Api.Database.csproj",
+        "projectUniqueName": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Database\\Api.Database.csproj",
         "projectName": "Api.Database",
-        "projectPath": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Database\\Api.Database.csproj",
+        "projectPath": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Database\\Api.Database.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Database\\obj\\",
+        "outputPath": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Database\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

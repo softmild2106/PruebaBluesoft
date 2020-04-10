@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Common\\Api.Common.csproj": {}
+    "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Common\\Api.Common.csproj": {}
   },
   "projects": {
-    "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Common\\Api.Common.csproj": {
+    "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Common\\Api.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Common\\Api.Common.csproj",
+        "projectUniqueName": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Common\\Api.Common.csproj",
         "projectName": "Api.Common",
-        "projectPath": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Common\\Api.Common.csproj",
+        "projectPath": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Common\\Api.Common.csproj",
         "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
-        "outputPath": "E:\\ProjectsBase\\WebApiBase\\WebApi\\Api.Common\\obj\\",
+        "outputPath": "E:\\projectsTest\\PruebaBluesoft\\WebApi\\Api.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
