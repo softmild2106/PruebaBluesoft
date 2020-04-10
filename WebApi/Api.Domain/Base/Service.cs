@@ -32,9 +32,9 @@ namespace Api.Domain.Base
             return response;
         }
 
-        public void Delete(TDTO dtoObject)
+        public void Delete(TKey id)
         {
-            TEntity entity = ConvertToEntity(dtoObject);
+            TEntity entity = Repository.GetById(id);
             Repository.Delete(entity);
         }
 
