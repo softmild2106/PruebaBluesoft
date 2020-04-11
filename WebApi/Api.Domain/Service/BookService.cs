@@ -6,6 +6,7 @@ using Api.Repository.IRepository;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using static Api.Common.Constants;
 
@@ -25,7 +26,8 @@ namespace Api.Domain.Service
             {
                 case SearchType.Name:
                     if(string.IsNullOrEmpty(filterDto.Name))
-                        throw new ArgumentException(BOOK_NAME_NULL_OR_EMPTY, "Name");
+                        throw new ArgumentException(BOOK_NAME_NULL_OR_EMPTY);
+
                     whereExpression = (b => b.BookName.Contains(filterDto.Name));
                     break;
                 case SearchType.Category:
@@ -39,7 +41,8 @@ namespace Api.Domain.Service
                     break;
             }
             var result = Find(whereExpression);
-            return result;
+            
+            return result.Data.Count() == 0 ? throw new ArgumentException(BOOK_LIST_EMPTY) : result;
         }
     }
 }

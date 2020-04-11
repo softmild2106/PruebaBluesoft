@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using Api.Domain.Base;
 using Api.Domain.Dto;
 using Api.Domain.IService;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
+using Swashbuckle.Swagger.Annotations;
 using static Api.Common.Constants;
 
 namespace Api.Presentation.Controllers
@@ -44,23 +44,24 @@ namespace Api.Presentation.Controllers
         }
 
         [HttpGet("GetBookList")]
-        public DataTransferObject<IEnumerable<BookDto>> GetBookListWithFilter(BookFilterDto filterDto)
+        [SwaggerResponse(200, Type = typeof(DataTransferObject<IEnumerable<BookDto>>))]
+        public DataTransferObject<IEnumerable<BookDto>> GetBookListWithFilter([FromQuery]BookFilterDto filterDto)
         {
             try
             {
-                return service.FindAll();
+                return service.GetBookListWithFilter(filterDto);
             }
             catch (ArgumentException ex)
-            {                
+            {                   
                 _logger.LogError(ex.ToString());
-                var resultException = new DataTransferObject<IEnumerable<BookDto>>(null, HttpStatusCode.BadRequest, ex.ToString());
+                var resultException = new DataTransferObject<IEnumerable<BookDto>>(null, HttpStatusCode.BadRequest, ex.Message);
                 return resultException;
             }
             catch (Exception ex)
             {
                 var logerror = string.Format(LOG_ERROR, ex.ToString());
                 _logger.LogError(logerror);
-                var resultException = new DataTransferObject<IEnumerable<BookDto>>(null, HttpStatusCode.BadRequest, ex.ToString());
+                var resultException = new DataTransferObject<IEnumerable<BookDto>>(null, HttpStatusCode.InternalServerError, ex.ToString());
                 return resultException;
             }
 

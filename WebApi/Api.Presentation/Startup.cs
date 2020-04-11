@@ -34,6 +34,7 @@ namespace Api.Presentation
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors();
             AddDependencyInjection(services);
             services.AddSwaggerGen(c =>
             {
@@ -66,6 +67,8 @@ namespace Api.Presentation
                 var context = serviceScope.ServiceProvider.GetRequiredService<ApiContext>();
                 context.Database.Migrate();
             }
+
+            app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseHttpsRedirection();
 

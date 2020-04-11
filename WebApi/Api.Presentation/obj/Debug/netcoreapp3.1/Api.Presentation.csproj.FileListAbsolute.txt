@@ -199,6 +199,9 @@ E:\projectsTest\PruebaBluesoft\WebApi\Api.Presentation\bin\Debug\netcoreapp3.1\N
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Presentation\bin\Debug\netcoreapp3.1\nlog.config
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Presentation\bin\Debug\netcoreapp3.1\NLog.Extensions.Logging.dll
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Presentation\bin\Debug\netcoreapp3.1\NLog.Web.AspNetCore.dll
+E:\projectsTest\PruebaBluesoft\WebApi\Api.Presentation\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+E:\projectsTest\PruebaBluesoft\WebApi\Api.Presentation\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+E:\projectsTest\PruebaBluesoft\WebApi\Api.Presentation\bin\Debug\netcoreapp3.1\Swashbuckle.Core.dll
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Presentation\obj\Debug\netcoreapp3.1\Api.Presentation.csproj.CoreCompileInputs.cache
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Presentation\obj\Debug\netcoreapp3.1\Api.Presentation.MvcApplicationPartsAssemblyInfo.cs
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Presentation\obj\Debug\netcoreapp3.1\Api.Presentation.MvcApplicationPartsAssemblyInfo.cache

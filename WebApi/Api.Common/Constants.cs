@@ -13,6 +13,7 @@ namespace Api.Common
 
         #region "Exceptions Strings"
         public static readonly string BOOK_NAME_NULL_OR_EMPTY = "No has ingresado ningún nombre, por favor vuelve a intentarlo.";
+        public static readonly string BOOK_LIST_EMPTY = "La búsqueda no retorno ningún valor, por favor vuelve a intentarlo.";
         #endregion
     }
 }
