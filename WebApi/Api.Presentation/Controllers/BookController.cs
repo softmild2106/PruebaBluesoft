@@ -25,7 +25,7 @@ namespace Api.Presentation.Controllers
             _logger = logger;
             this.service = service;
         }
-        // GET: api/Author
+        // GET: api/Book
         [HttpGet]
         public DataTransferObject<IEnumerable<BookDto>> Get()
         {
@@ -42,7 +42,31 @@ namespace Api.Presentation.Controllers
             }
 
         }
-        // POST: api/Author
+
+        [HttpGet("GetBookList")]
+        public DataTransferObject<IEnumerable<BookDto>> GetBookListWithFilter(BookFilterDto filterDto)
+        {
+            try
+            {
+                return service.FindAll();
+            }
+            catch (ArgumentException ex)
+            {                
+                _logger.LogError(ex.ToString());
+                var resultException = new DataTransferObject<IEnumerable<BookDto>>(null, HttpStatusCode.BadRequest, ex.ToString());
+                return resultException;
+            }
+            catch (Exception ex)
+            {
+                var logerror = string.Format(LOG_ERROR, ex.ToString());
+                _logger.LogError(logerror);
+                var resultException = new DataTransferObject<IEnumerable<BookDto>>(null, HttpStatusCode.BadRequest, ex.ToString());
+                return resultException;
+            }
+
+        }
+
+        // POST: api/Book
         [HttpPost]
         public DataTransferObject<BookDto> Post([FromBody] BookDto book)
         {
@@ -60,7 +84,7 @@ namespace Api.Presentation.Controllers
             }
         }
 
-        // PUT: api/Author/5
+        // PUT: api/Book/5
         [HttpPost("{id}")]
         public DataTransferObject<BookDto> Update(int id, [FromBody] BookDto book)
         {
