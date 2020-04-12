@@ -14,7 +14,8 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 import { EditComponent } from './views/category/edit/edit.component';
 import { BasecomponentComponent } from './views/basecomponent/basecomponent.component';
 import { ListComponent } from './views/category/list/list.component';
-import { CustomTableComponent } from './components/custom-table/custom-table.component';
+import { CreateComponent as CreateAuthorComponent } from './views/author/create/create.component';
+import { EditComponent as EditAuthorComponent } from './views/author/edit/edit.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,15 +25,16 @@ import { CustomTableComponent } from './components/custom-table/custom-table.com
     EditComponent,
     BasecomponentComponent,
     ListComponent,
-    CustomTableComponent,
+    CreateAuthorComponent,
+    EditAuthorComponent,
   ],
   imports: [
     BrowserModule,
+    MaterialModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MaterialModule,
     ReactiveFormsModule,
   ],
   providers: [

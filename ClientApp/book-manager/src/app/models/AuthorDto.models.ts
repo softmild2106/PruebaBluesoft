@@ -1,7 +1,7 @@
 export interface AuthorDto {
-  Id: number;
-  Name: string;
-  LastName: string;
-  FullName: string;
-  DateBirth: Date;
+  id?: number;
+  name: string;
+  lastName: string;
+  fullName?: string;
+  dateBirth: Date;
 }

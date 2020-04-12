@@ -40,6 +40,22 @@ namespace Api.Presentation.Controllers
             }
             
         }
+        [HttpGet("{id}")]
+        public DataTransferObject<AuthorDto> GetAuthorById(int id)
+        {
+            try
+            {
+                return service.FindById(id);
+            }
+            catch (Exception ex)
+            {
+                var logerror = string.Format(LOG_ERROR, ex.ToString());
+                _logger.LogError(logerror);
+                var resultException = new DataTransferObject<AuthorDto>(null, HttpStatusCode.BadRequest, ex.ToString());
+                return resultException;
+            }
+
+        }
         // POST: api/Author
         [HttpPost]
         public DataTransferObject<AuthorDto> Post([FromBody] AuthorDto author)

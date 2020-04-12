@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import CategoryDto from '../../../models/CategoryDto.model';
+import { AuthorDto } from '../../../models/AuthorDto.models';
 import { DataTransferObject } from '../../../models/DataTransferObject.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { BasecomponentComponent } from '../../basecomponent/basecomponent.component';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-edit',
@@ -13,13 +13,9 @@ import { BasecomponentComponent } from '../../basecomponent/basecomponent.compon
 })
 export class EditComponent extends BasecomponentComponent implements OnInit {
   id: number;
-  response: DataTransferObject<CategoryDto>;
-  actionUrl = 'Category/';
+  requestBody: AuthorDto;
+  actionUrl = 'Author/';
   endPointComplete = this.baseUrl + this.actionUrl;
-  categoryName = '';
-  categoryDescription = '';
-  requestBody: CategoryDto;
-
   constructor(
     private activatedRoute: ActivatedRoute,
     public http: HttpClient,
@@ -35,35 +31,28 @@ export class EditComponent extends BasecomponentComponent implements OnInit {
 
   HandleSubmit(event: any) {
     event.preventDefault();
-    this.isLoading = true;
-    this.requestBody = {
-      name: this.categoryName,
-      description: this.categoryDescription,
-    };
+    // debugger;
     console.log(this.requestBody);
     this.http
       .post(this.endPointComplete + this.id, this.requestBody)
-      .subscribe((response: DataTransferObject<CategoryDto>) => {
+      .subscribe((response: DataTransferObject<AuthorDto>) => {
         console.log(response);
         if (response.header.code === 200) {
-          this.openSnackBar('Editaste correctamente la categoria.');
+          this.openSnackBar('Haz editado correctamente el autor.');
         } else {
           this.openSnackBar('Algo salió mal.');
         }
-        this.isLoading = false;
       });
   }
-
   getData() {
     this.http
       .get(this.endPointComplete + this.id)
-      .subscribe((response: DataTransferObject<CategoryDto>) => {
+      .subscribe((response: DataTransferObject<AuthorDto>) => {
         console.log(response);
         if (response.header.code !== 200) {
           this.openSnackBar('Algo salió mal.');
         } else {
-          this.categoryName = response.data.name;
-          this.categoryDescription = response.data.description;
+          this.requestBody = response.data;
           this.isLoading = false;
         }
       });
