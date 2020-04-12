@@ -1,0 +1,34 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<table class="table table-striped" *ngIf="!isLoading">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let category of dataSource; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ category.name }}</td>
+      <td>{{ category.description }}</td>
+      <td>
+        <button
+          [routerLink]="['/editcategory', category.id]"
+          class="btn btn-secondary"
+        >
+          Editar
+        </button>
+      </td>
+      <td>
+        <button
+          (click)="handleDelete($event, category.id)"
+          class="btn btn-danger"
+        >
+          Eliminar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

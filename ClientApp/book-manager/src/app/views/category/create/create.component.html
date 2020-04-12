@@ -1,0 +1,24 @@
+<form class="container">
+  <h1>Crear Categoria</h1>
+  <div class="form-group">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="categoryName" name="categoryName" />
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field appearance="fill">
+      <mat-label>Descripcion</mat-label>
+      <textarea
+        matInput
+        [(ngModel)]="categoryDescription"
+        name="categoryDescription"
+      ></textarea>
+    </mat-form-field>
+  </div>
+  <div class="form-group">
+    <button mat-raised-button color="accent" (click)="HandleSubmit($event)">
+      Crear Categoria
+    </button>
+  </div>
+</form>

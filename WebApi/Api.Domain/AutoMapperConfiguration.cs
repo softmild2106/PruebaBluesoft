@@ -12,7 +12,10 @@ namespace Api.Domain
         public AutoMapperConfiguration()
         {
             CreateMap<Author, AuthorDto>().ReverseMap();
-            /*var assembly = Assembly.LoadFrom("Api.Core.DTO");
+            CreateMap<Book, BookDto>().ReverseMap();
+            CreateMap<Category, CategoryDto>().ReverseMap();
+
+            /*var assembly = Assembly.LoadFrom("");
                            var entityAssembly = typeof(Dto).Assembly;
                            var modelAssembly = typeof(BaseModel).Assembly;
                            var modelNamespace = modelAssembly.GetTypes().Where(a => a.BaseType == typeof(BaseModel)).FirstOrDefault().Namespace;

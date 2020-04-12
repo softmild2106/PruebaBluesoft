@@ -42,6 +42,22 @@ namespace Api.Presentation.Controllers
             }
 
         }
+        [HttpGet("{id}")]
+        public DataTransferObject<CategoryDto> GetCategoryById(int id)
+        {
+            try
+            {
+                return service.FindById(id);
+            }
+            catch (Exception ex)
+            {
+                var logerror = string.Format(LOG_ERROR, ex.ToString());
+                _logger.LogError(logerror);
+                var resultException = new DataTransferObject<CategoryDto>(null, HttpStatusCode.BadRequest, ex.ToString());
+                return resultException;
+            }
+
+        }
         // POST: api/Category
         [HttpPost]
         public DataTransferObject<CategoryDto> Post([FromBody] CategoryDto category)
@@ -66,6 +82,7 @@ namespace Api.Presentation.Controllers
         {
             try
             {
+                category.Id = id;
                 return service.Update(category);
             }
             catch (Exception ex)
