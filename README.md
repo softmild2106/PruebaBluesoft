@@ -5,6 +5,7 @@
 2. Ingresar al proyecto por medio de VS y dar click derecho a la solucion * WebApi *(Primera linea en Explorador de soluciones) y buscar opción **Restaurar Paquetes de NuGet**.
 3. Dentro de la solución, en la ruta **Src/Layers/3. Presentation/** dar click derecho sobre el proyecto Api.Presentation y dar click a **Establecer como proyecto de inicio**.
 4. Ejecutar el proyecto con la tecla F5 o buscar el boton IIS Express en la parte superior central.
+5. Se instalo **SWAGGER** como pagina de inicio para las pruebas de los endpoints.
 
 NOTA: Las migraciones se corren automaticamente, si es necesario, con la siguiente instrucción que esta en el startup.
    using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>().CreateScope())
@@ -18,5 +19,5 @@ NOTA: Las migraciones se corren automaticamente, si es necesario, con la siguien
 2. Ejecutar **npm i**.
 3. Ejecutar **ng serve -o**.
 
-**Modelo Relacional**
+**MODELO-RELACIONAL**
 El root del repositorio, abrir el archivo **ER-diagram.png**
