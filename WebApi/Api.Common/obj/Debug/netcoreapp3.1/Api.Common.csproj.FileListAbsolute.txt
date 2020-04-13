@@ -18,3 +18,4 @@ E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\bin\Debug\netcoreapp3.1\Api.Com
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\bin\Debug\netcoreapp3.1\Api.Common.runtimeconfig.dev.json
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.csproj.CoreCompileInputs.cache
 E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.genruntimeconfig.cache
+E:\projectsTest\PruebaBluesoft\WebApi\Api.Common\obj\Debug\netcoreapp3.1\Api.Common.csprojAssemblyReference.cache

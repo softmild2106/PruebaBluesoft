@@ -6,6 +6,7 @@
       <th scope="col">Nombres</th>
       <th scope="col">Apellidos</th>
       <th scope="col">Fecha de Nacimiento</th>
+      <th scope="col">Acciones</th>
     </tr>
   </thead>
   <tbody>
@@ -13,7 +14,7 @@
       <th scope="row">{{ i + 1 }}</th>
       <td>{{ author.name }}</td>
       <td>{{ author.lastName }}</td>
-      <td>{{ author.dateBirth.toString("dd/MM/yyyy") }}</td>
+      <td>{{ author.dateBirth }}</td>
       <td>
         <button
           [routerLink]="['/author/edit', author.id]"
@@ -21,8 +22,6 @@
         >
           Editar
         </button>
-      </td>
-      <td>
         <button
           (click)="handleDelete($event, author.id)"
           class="btn btn-danger"

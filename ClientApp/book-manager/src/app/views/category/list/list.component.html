@@ -15,13 +15,11 @@
       <td>{{ category.description }}</td>
       <td>
         <button
-          [routerLink]="['/editcategory', category.id]"
+          [routerLink]="['/category/edit', category.id]"
           class="btn btn-secondary"
         >
           Editar
         </button>
-      </td>
-      <td>
         <button
           (click)="handleDelete($event, category.id)"
           class="btn btn-danger"

@@ -71,7 +71,7 @@ export class IndexComponent extends BasecomponentComponent implements OnInit {
         .subscribe((response: DataTransferObject<AuthorDto>) => {
           console.log(response);
           if (response.header.code !== 200) {
-            this.openSnackBar('Algo salió mal.');
+            this.openSnackBar(response.header.message);
           } else {
             this.getData();
           }
@@ -85,7 +85,7 @@ export class IndexComponent extends BasecomponentComponent implements OnInit {
       .subscribe((response: DataTransferObject<BookDto[]>) => {
         console.log(response);
         if (response.header.code !== 200) {
-          this.openSnackBar('Algo salió mal.');
+          this.openSnackBar(response.header.message);
         } else {
           this.dataSource = response.data;
           this.isLoading = false;
@@ -99,7 +99,7 @@ export class IndexComponent extends BasecomponentComponent implements OnInit {
       .subscribe((response: DataTransferObject<CategoryDto[]>) => {
         console.log(response);
         if (response.header.code !== 200) {
-          this.openSnackBar('Algo salió mal.');
+          this.openSnackBar(response.header.message);
         } else {
           this.categories = response.data;
         }
@@ -112,7 +112,7 @@ export class IndexComponent extends BasecomponentComponent implements OnInit {
       .subscribe((response: DataTransferObject<AuthorDto[]>) => {
         console.log(response);
         if (response.header.code !== 200) {
-          this.openSnackBar('Algo salió mal.');
+          this.openSnackBar(response.header.message);
         } else {
           this.authors = response.data;
         }

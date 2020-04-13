@@ -9,12 +9,13 @@ import { ListComponent as ListCategoryComponent } from './views/category/list/li
 import { CreateComponent as CreateBookComponent } from './views/book/create/create.component';
 import { EditComponent as EditBookComponent } from './views/book/edit/edit.component';
 import { IndexComponent as IndexBookComponent } from './views/book/index/index.component';
+import { HomeComponent } from './views/home/home.component';
 
 const routes: Routes = [
-  // { path: 'home', component: BookComponent },
-  { path: 'createcategory', component: CreateCategoryComponent },
-  { path: 'editcategory/:id', component: EditCategoryComponent },
-  { path: 'categorylist', component: ListCategoryComponent },
+  { path: 'home', component: HomeComponent },
+  { path: 'category/create', component: CreateCategoryComponent },
+  { path: 'category/edit/:id', component: EditCategoryComponent },
+  { path: 'category/index', component: ListCategoryComponent },
   { path: 'author/create', component: CreateAuthorComponent },
   { path: 'author/edit/:id', component: EditAuthorComponent },
   { path: 'author/index', component: IndexAuthorComponent },

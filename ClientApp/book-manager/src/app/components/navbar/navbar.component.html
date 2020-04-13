@@ -4,9 +4,25 @@
   <div class="spacer"></div>
 
   <a mat-button routerLink="home">Home</a>
-  <a mat-button routerLink="createcategory">Crear Categoria</a>
-  <a mat-button routerLink="author/create">Crear Autores</a>
-  <a mat-button routerLink="author/index">Lista de Autores</a>
-  <a mat-button routerLink="book">Libros</a>
-  <!-- <a mat-raised-button color="accent" routerLink="signup">Sign Up</a> -->
+
+  <button mat-button [matMenuTriggerFor]="menuBook">Libros</button>
+  <mat-menu #menuBook="matMenu">
+    <button mat-menu-item routerLink="book/index">Lista de libros</button>
+    <button mat-menu-item routerLink="book/create">Crear Libro</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="menuAuthor">Autores</button>
+  <mat-menu #menuAuthor="matMenu">
+    <button mat-menu-item routerLink="author/index">Lista de Autores</button>
+    <button mat-menu-item routerLink="author/create">Crear Autor</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="menuCat">Categorias</button>
+  <mat-menu #menuCat="matMenu">
+    <button mat-menu-item routerLink="category/index">
+      Lista de Categorias
+    </button>
+    <button mat-menu-item routerLink="category/create">Crear Categoria</button>
+  </mat-menu>
+  <!-- <a mat-raised-button color="accent" routerLink="signin">Iniciar sesión</a> -->
 </mat-toolbar>
