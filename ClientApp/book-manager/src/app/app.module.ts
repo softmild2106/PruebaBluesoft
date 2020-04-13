@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BookComponent } from './views/book/book.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MaterialModule } from './material-module';
@@ -16,10 +15,12 @@ import { BasecomponentComponent } from './views/basecomponent/basecomponent.comp
 import { ListComponent } from './views/category/list/list.component';
 import { CreateComponent as CreateAuthorComponent } from './views/author/create/create.component';
 import { EditComponent as EditAuthorComponent } from './views/author/edit/edit.component';
+import { IndexComponent as IndexAuthorComponent } from './views/author/index/index.component';
+import { CreateComponent as CreateBookComponent } from './views/book/create/create.component';
+import { EditComponent as EditBookComponent } from './views/book/edit/edit.component';
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent,
     NavbarComponent,
     CreateCategoryComponent,
     EditComponent,
@@ -27,6 +28,9 @@ import { EditComponent as EditAuthorComponent } from './views/author/edit/edit.c
     ListComponent,
     CreateAuthorComponent,
     EditAuthorComponent,
+    IndexAuthorComponent,
+    CreateBookComponent,
+    EditBookComponent,
   ],
   imports: [
     BrowserModule,

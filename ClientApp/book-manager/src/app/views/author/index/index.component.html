@@ -1,0 +1,35 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<table class="table table-striped" *ngIf="!isLoading">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombres</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Fecha de Nacimiento</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let author of dataSource; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ author.name }}</td>
+      <td>{{ author.lastName }}</td>
+      <td>{{ author.dateBirth.toString("dd/MM/yyyy") }}</td>
+      <td>
+        <button
+          [routerLink]="['/author/edit', author.id]"
+          class="btn btn-secondary"
+        >
+          Editar
+        </button>
+      </td>
+      <td>
+        <button
+          (click)="handleDelete($event, author.id)"
+          class="btn btn-danger"
+        >
+          Eliminar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -43,6 +43,23 @@ namespace Api.Presentation.Controllers
 
         }
 
+        [HttpGet("{id}")]
+        public DataTransferObject<BookDto> GetBookById(int id)
+        {
+            try
+            {
+                return service.FindById(id);
+            }
+            catch (Exception ex)
+            {
+                var logerror = string.Format(LOG_ERROR, ex.ToString());
+                _logger.LogError(logerror);
+                var resultException = new DataTransferObject<BookDto>(null, HttpStatusCode.BadRequest, ex.ToString());
+                return resultException;
+            }
+
+        }
+
         [HttpGet("GetBookList")]
         [SwaggerResponse(200, Type = typeof(DataTransferObject<IEnumerable<BookDto>>))]
         public DataTransferObject<IEnumerable<BookDto>> GetBookListWithFilter([FromQuery]BookFilterDto filterDto)

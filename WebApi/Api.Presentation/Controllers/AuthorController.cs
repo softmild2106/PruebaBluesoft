@@ -80,6 +80,7 @@ namespace Api.Presentation.Controllers
         {
             try
             {
+                author.Id = id;
                 return service.Update(author);
             }
             catch (Exception ex)
