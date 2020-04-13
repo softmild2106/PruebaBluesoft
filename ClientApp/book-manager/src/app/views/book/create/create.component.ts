@@ -9,6 +9,7 @@ import { BasecomponentComponent } from '../../basecomponent/basecomponent.compon
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
@@ -18,7 +19,7 @@ export class CreateComponent extends BasecomponentComponent implements OnInit {
   constructor(public http: HttpClient, public _snackBar: MatSnackBar) {
     super(http, _snackBar);
   }
-  requestBody: BookDto = { BookName: '', AuthorId: 0, CategoryId: 0, ISBN: '' };
+  requestBody: BookDto = { bookName: '', authorId: 0, categoryId: 0, isbn: '' };
   author: AuthorDto;
   authors: AuthorDto[];
   categories: CategoryDto[];
@@ -79,7 +80,7 @@ export class CreateComponent extends BasecomponentComponent implements OnInit {
               if (typeof value === 'string') {
                 return value;
               } else {
-                this.requestBody.AuthorId = value.id;
+                this.requestBody.authorId = value.id;
                 return value.fullName;
               }
             }),
@@ -95,7 +96,7 @@ export class CreateComponent extends BasecomponentComponent implements OnInit {
 
   private _filter(value: string): AuthorDto[] {
     console.log(value);
-    console.log(this.requestBody.AuthorId);
+    console.log(this.requestBody.authorId);
     const filterValue = value.toLowerCase();
     return this.authors.filter(
       (option) => option.name.toLowerCase().indexOf(filterValue) === 0

@@ -3,7 +3,7 @@
   <div class="form-group">
     <mat-form-field appearance="fill">
       <mat-label>Nombre</mat-label>
-      <input matInput [(ngModel)]="requestBody.BookName" name="name" />
+      <input matInput [(ngModel)]="requestBody.bookName" name="name" />
     </mat-form-field>
   </div>
   <div class="form-group">
@@ -35,7 +35,7 @@
       <mat-label>ISBN</mat-label>
       <input
         matInput
-        [(ngModel)]="requestBody.ISBN"
+        [(ngModel)]="requestBody.isbn"
         name="ISBN"
         maxlength="13"
       />
@@ -45,7 +45,7 @@
     <mat-radio-group
       color="primary"
       aria-labelledby="radio-group-label"
-      [(ngModel)]="requestBody.CategoryId"
+      [(ngModel)]="requestBody.categoryId"
       name="radio"
     >
       <mat-radio-button

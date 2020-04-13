@@ -40,8 +40,7 @@ namespace Api.Domain.Service
                     whereExpression = (b => true);
                     break;
             }
-            var result = Find(whereExpression);
-            
+            var result = Find(whereExpression);            
             return result.Data.Count() == 0 ? throw new ArgumentException(BOOK_LIST_EMPTY) : result;
         }
     }

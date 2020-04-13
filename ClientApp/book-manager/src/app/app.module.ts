@@ -18,6 +18,7 @@ import { EditComponent as EditAuthorComponent } from './views/author/edit/edit.c
 import { IndexComponent as IndexAuthorComponent } from './views/author/index/index.component';
 import { CreateComponent as CreateBookComponent } from './views/book/create/create.component';
 import { EditComponent as EditBookComponent } from './views/book/edit/edit.component';
+import { IndexComponent as IndexBookComponent } from './views/book/index/index.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,6 +32,7 @@ import { EditComponent as EditBookComponent } from './views/book/edit/edit.compo
     IndexAuthorComponent,
     CreateBookComponent,
     EditBookComponent,
+    IndexBookComponent,
   ],
   imports: [
     BrowserModule,

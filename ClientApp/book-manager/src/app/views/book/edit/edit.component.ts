@@ -33,7 +33,7 @@ export class EditComponent extends BasecomponentComponent implements OnInit {
   categoryUrl = 'Category/';
   bookUrl = 'Book/';
   filteredAuthorOptions: Observable<AuthorDto[]>;
-  myControl = new FormControl();
+  autoComplete = new FormControl();
   categoryId: number;
 
   ngOnInit(): void {
@@ -51,14 +51,12 @@ export class EditComponent extends BasecomponentComponent implements OnInit {
           this.openSnackBar('Algo salió mal.');
         } else {
           this.requestBody = response.data;
-          console.log(this.requestBody);
-          console.log(this.authors);
           let author = this.authors.find(
             (a) => a.id === this.requestBody.authorId
           );
 
           console.log(author);
-          this.myControl.setValue(author);
+          this.autoComplete.setValue(author);
           this.isLoading = false;
         }
       });
@@ -69,7 +67,7 @@ export class EditComponent extends BasecomponentComponent implements OnInit {
     // debugger;
     console.log(this.requestBody);
     this.http
-      .post(this.baseUrl + this.bookUrl, this.requestBody)
+      .post(this.baseUrl + this.bookUrl + this.id, this.requestBody)
       .subscribe((response: DataTransferObject<BookDto>) => {
         console.log(response);
         if (response.header.code === 200) {
@@ -103,7 +101,7 @@ export class EditComponent extends BasecomponentComponent implements OnInit {
           this.openSnackBar('Algo salió mal.');
         } else {
           this.authors = response.data;
-          this.filteredAuthorOptions = this.myControl.valueChanges.pipe(
+          this.filteredAuthorOptions = this.autoComplete.valueChanges.pipe(
             startWith(''),
             map((value) => {
               if (typeof value === 'string') {

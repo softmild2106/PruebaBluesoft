@@ -8,6 +8,7 @@ import { EditComponent as EditCategoryComponent } from './views/category/edit/ed
 import { ListComponent as ListCategoryComponent } from './views/category/list/list.component';
 import { CreateComponent as CreateBookComponent } from './views/book/create/create.component';
 import { EditComponent as EditBookComponent } from './views/book/edit/edit.component';
+import { IndexComponent as IndexBookComponent } from './views/book/index/index.component';
 
 const routes: Routes = [
   // { path: 'home', component: BookComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'author/index', component: IndexAuthorComponent },
   { path: 'book/create', component: CreateBookComponent },
   { path: 'book/edit/:id', component: EditBookComponent },
+  { path: 'book/index', component: IndexBookComponent },
 ];
 
 @NgModule({

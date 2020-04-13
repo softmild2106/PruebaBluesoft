@@ -1,0 +1,76 @@
+<mat-spinner *ngIf="isLoading"></mat-spinner>
+<br />
+<br />
+<div class="form-group">
+  <strong>Buscar por: </strong>
+</div>
+<div class="form-group">
+  <mat-radio-group
+    color="primary"
+    aria-labelledby="radio-group-label"
+    [(ngModel)]="typeSearch"
+    name="radio"
+  >
+    <mat-radio-button class="p-1" value="1">Nombre</mat-radio-button>
+    <mat-radio-button class="p-1" value="2">Categoria</mat-radio-button>
+    <mat-radio-button class="p-1" value="3">Autor</mat-radio-button>
+  </mat-radio-group>
+</div>
+<mat-form-field *ngIf="typeSearch == 1">
+  <mat-label>Buscar...</mat-label>
+  <input matInput placeholder="Buscar" [(ngModel)]="searchText" />
+</mat-form-field>
+<mat-form-field *ngIf="typeSearch == 2">
+  <mat-label>Categoria</mat-label>
+  <mat-select [(ngModel)]="categoryId">
+    <mat-option *ngFor="let category of categories" [value]="category.id">
+      {{ category.name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field *ngIf="typeSearch == 3">
+  <mat-label>Autor</mat-label>
+  <mat-select [(ngModel)]="authorId">
+    <mat-option *ngFor="let author of authors" [value]="author.id">
+      {{ author.fullName }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<div class="form-group" *ngIf="typeSearch != 0" class="p-2">
+  <button mat-fab (click)="handleSearch($event)" color="primary">
+    buscar
+  </button>
+</div>
+
+<table class="table table-striped" *ngIf="!isLoading">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Autor</th>
+      <th scope="col">Categoria</th>
+      <th scope="col">ISBN</th>
+      <th scope="col">Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let book of dataSource; let i = index">
+      <th scope="row">{{ i + 1 }}</th>
+      <td>{{ book.bookName }}</td>
+      <td>{{ book.authorId }}</td>
+      <td>{{ book.categoryId }}</td>
+      <td>{{ book.isbn }}</td>
+      <td>
+        <button
+          [routerLink]="['/book/edit', book.id]"
+          class="btn btn-secondary"
+        >
+          Editar
+        </button>
+        <button (click)="handleDelete($event, book.id)" class="btn btn-danger">
+          Eliminar
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
