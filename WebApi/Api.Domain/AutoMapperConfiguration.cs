@@ -1,8 +1,11 @@
-﻿using Api.Database.Entity;
+﻿using Api.Database.Base;
+using Api.Database.Entity;
 using Api.Domain.Dto;
 using AutoMapper;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace Api.Domain
@@ -11,24 +14,19 @@ namespace Api.Domain
     {
         public AutoMapperConfiguration()
         {
-            CreateMap<Author, AuthorDto>().ReverseMap();
-            CreateMap<Book, BookDto>().ReverseMap();
-            CreateMap<Category, CategoryDto>().ReverseMap();
-
-            /*var assembly = Assembly.LoadFrom("");
-                           var entityAssembly = typeof(Dto).Assembly;
-                           var modelAssembly = typeof(BaseModel).Assembly;
-                           var modelNamespace = modelAssembly.GetTypes().Where(a => a.BaseType == typeof(BaseModel)).FirstOrDefault().Namespace;
-
-                           foreach (var entity in entityAssembly.GetTypes().Where(a => a.BaseType == typeof(BaseEntity)))
-                           {
-                               var model = modelAssembly.GetType(string.Format("{0}.{1}{2}", modelNamespace, entity.Name, "Model"));
-                               if (model != null)
-                               {
-                                   CreateMap(entity, model);
-                                   CreateMap(model, entity);
-                               }
-                           }*/
+            var assemblyDatabase = AppDomain.CurrentDomain.GetAssemblies().Where(x => x.GetName().Name == "Api.Database").FirstOrDefault();
+            var dtoList = AppDomain.CurrentDomain.GetAssemblies().Where(x => x.GetName().Name == "Api.Domain").FirstOrDefault().GetTypes().Where(x => x.Name.EndsWith("Dto"));
+            foreach (var dto in dtoList)
+            {
+                var nameDto = dto.Name;
+                var idx = nameDto.LastIndexOfAny("Dto".ToArray());
+                var nameEntity = nameDto.Remove(idx - 2,3);
+                var entity = assemblyDatabase.GetTypes().Where(a => a.Name == nameEntity).FirstOrDefault();
+                if (entity != null)
+                {
+                    CreateMap(entity, dto).ReverseMap();
+                }                
+            }
         }
 
     }
